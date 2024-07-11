@@ -1,0 +1,14 @@
+name: Hello Actions
+
+on:
+  push:
+    branches: main
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "This job was tirggered by a ${{ github.event_name }} event"
+      - name: checkout-repository
+        uses: actions/checkout@v4
+      - run: echo "job: Hello Actions"
