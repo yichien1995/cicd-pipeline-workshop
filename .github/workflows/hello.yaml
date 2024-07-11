@@ -11,4 +11,4 @@ jobs:
       - run: echo "This job was tirggered by a ${{ github.event_name }} event"
       - name: checkout-repository
         uses: actions/checkout@v4
-      - run: echo "job: Hello Actions"
+      - run: echo "job - Hello Actoins"
