@@ -8,7 +8,13 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-      # - name: deploy to ec2
-      # uses: appleboy/ssh-action@v1.0.3
-      - run: echo "${{secrets.TEST}}"
-      - run: echo "${{secrets.TEST}}"
+      - name: deploy to ec2
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USERNAME }}
+          key: ${{ secrets.EC2_KEY }}
+          port: ${{ secrets.EC2_PORT }}
+          script: |
+            cd /home/ubuntu/
+            touch a.txt
