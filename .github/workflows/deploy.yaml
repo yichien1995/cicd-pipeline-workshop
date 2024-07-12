@@ -7,4 +7,4 @@ jobs:
   deploy-web:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Deploy testing"
+      - run: echo "Deploy testing 123"
