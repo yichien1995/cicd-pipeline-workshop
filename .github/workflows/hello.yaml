@@ -21,6 +21,8 @@ jobs:
       # 可能需要進行後續編譯或測試之類的
       - name: checkout-repository
         uses: actions/checkout@v4
+      - name: Try to fail
+        run: exit 1
       - run: echo "job - Hello Actoins"
   second-job:
     runs-on: ubuntu-latest
