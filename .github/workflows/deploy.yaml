@@ -16,5 +16,6 @@ jobs:
           key: ${{ secrets.EC2_KEY }}
           port: ${{ secrets.EC2_PORT }}
           script: |
-            cd /home/ubuntu/
-            touch c.txt
+            cd /home/ubuntu/cicd-pipeline-workshop
+            git pull
+            pm2 restart src/server.js
