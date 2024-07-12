@@ -1,10 +1,11 @@
 name: deploy
 on:
   pull_request:
-    types: [opened, synchronize]
+    types: [closed]
 
 jobs:
   deploy-web:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - run: echo "Deploy testing 123"
