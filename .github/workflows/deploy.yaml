@@ -8,4 +8,6 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Deploy testing 123"
+      - name: deploy to ec2
+        uses: appleboy/ssh-action@v1.0.3
+      - run: echo "${{secrets.TEST}}"
