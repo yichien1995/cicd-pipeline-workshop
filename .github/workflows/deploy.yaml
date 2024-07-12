@@ -17,4 +17,4 @@ jobs:
           port: ${{ secrets.EC2_PORT }}
           script: |
             cd /home/ubuntu/
-            touch a.txt
+            touch b.txt
