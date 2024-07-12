@@ -11,3 +11,4 @@ jobs:
       # - name: deploy to ec2
       # uses: appleboy/ssh-action@v1.0.3
       - run: echo "${{secrets.TEST}}"
+      - run: echo "${{secrets.TEST}}"
