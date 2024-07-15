@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3000;
 const DB_PWD = process.env.DB_PWD;
 
 app.get('/', (req, res) => {
-  res.send('Pipeline testing modify bash.bashrc.....2');
+  res.send('Pipeline testing modify bash.bashrc.....3');
 });
 
 app.get('/db', (req, res) => {
