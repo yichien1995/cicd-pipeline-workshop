@@ -18,4 +18,4 @@ jobs:
           script: |
             cd /home/ubuntu/cicd-pipeline-workshop
             git pull 
-            pm2 restart src/server.js
+            /home/ubuntu/.nvm/versions/node/v22.4.1/bin/pm2 restart src/server.js
