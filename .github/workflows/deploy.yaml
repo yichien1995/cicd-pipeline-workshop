@@ -18,5 +18,4 @@ jobs:
           script: |
             cd /home/ubuntu/cicd-pipeline-workshop
             git pull 
-            exec bash \-l
             pm2 restart src/server.js
