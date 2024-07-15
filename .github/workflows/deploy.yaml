@@ -18,11 +18,8 @@ jobs:
           script: |
             cd /home/ubuntu/cicd-pipeline-workshop
             git pull
-            echo "Loading NVM"
             export NVM_DIR="$HOME/.nvm"
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" 
             [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-            echo "Using Node.js version 22.4.1"
             nvm use 22.4.1
-            echo "Restarting server with PM2"
             /home/ubuntu/.nvm/versions/node/v22.4.1/bin/pm2 restart src/server.js
